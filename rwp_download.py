@@ -1,9 +1,8 @@
 #!/usr/bin/python
 import argparse
+from typing import Optional
 
 from rwp_example.rwp_download_url import download_url
-
-from typing import Optional
 
 
 def main(url: str, file_path: Optional[str] = None) -> bool:

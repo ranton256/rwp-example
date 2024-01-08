@@ -20,10 +20,12 @@ def main(url, file_path=None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-u", "--url",
-                    help="url to download")
-    parser.add_argument("-f", "--file_path",
-                    help="file path to save URL contents to, if not set writes to stdout")
+    parser.add_argument("-u", "--url", help="url to download")
+    parser.add_argument(
+        "-f",
+        "--file_path",
+        help="file path to save URL contents to, if not set writes to stdout",
+    )
     args = parser.parse_args()
 
     if args.url:

@@ -1,6 +1,7 @@
 #!/usr/bin/python
-import urllib3
 import argparse
+
+import urllib3
 
 
 def main(url, file_path=None):
@@ -12,7 +13,7 @@ def main(url, file_path=None):
             print(resp.data)
         else:
             print(f"Saving to {file_path}")
-            with open(file_path, "w") as f:
+            with open(file_path, "wb") as f:
                 f.write(resp.data)
     return resp.status == 200
 
